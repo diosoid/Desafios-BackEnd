@@ -1,0 +1,92 @@
+[
+	{
+		"title": "Alfajor Bonobon",
+		"description": "Chocolate",
+		"price": 323,
+		"thumbnail": "sin imagen",
+		"code": "abc1",
+		"stock": 20,
+		"id": 1
+	},
+	{
+		"title": "Vainillas",
+		"description": "Grande",
+		"price": 430,
+		"thumbnail": "sin imagen",
+		"code": "abc12",
+		"stock": 30,
+		"id": 2
+	},
+	{
+		"title": "Cocacola 750ml",
+		"description": "Comun",
+		"price": 350,
+		"thumbnail": "sin imagen",
+		"code": "abc123",
+		"stock": 15,
+		"id": 3
+	},
+	{
+		"title": "Papitas",
+		"description": "Rejilla",
+		"price": 500,
+		"thumbnail": "sin imagen",
+		"code": "abc1234",
+		"stock": 25,
+		"id": 4
+	},
+    {
+		"title": "Chicle",
+		"description": "Menta",
+		"price": 200,
+		"thumbnail": "sin imagen",
+		"code": "abc12345",
+		"stock": 100,
+		"id": 5
+	},
+    {
+		"title": "Fanta",
+		"description": "Comun",
+		"price": 400,
+		"thumbnail": "sin imagen",
+		"code": "abc123456",
+		"stock": 15,
+		"id": 6
+	},
+    {
+		"title": "Sprite",
+		"description": "Light",
+		"price": 450,
+		"thumbnail": "sin imagen",
+		"code": "abc1234567",
+		"stock": 43,
+		"id": 7
+	},
+    {
+		"title": "Pepitos",
+		"description": "Chico",
+		"price": 300,
+		"thumbnail": "sin imagen",
+		"code": "abc12345678",
+		"stock": 34,
+		"id": 8
+	},
+    {
+		"title": "Barra de chocolate",
+		"description": "Amargo",
+		"price": 467,
+		"thumbnail": "sin imagen",
+		"code": "abc12345679",
+		"stock": 70,
+		"id": 9
+	},
+    {
+		"title": "Huevo Kinder 120g",
+		"description": "Rosa",
+		"price": 3100,
+		"thumbnail": "sin imagen",
+		"code": "abcd1",
+		"stock": 30,
+		"id": 10
+	}
+]
