@@ -20,21 +20,14 @@ constructor(path){
     }
 
 
-    addProduct = async (
-        title,
-        description,
-        price,
-        thumbnail,
-        code,
-        stock
-        ) => {
-        
+    addProduct = async (title, description, price, thumbnail, code, stock) => {
+
         try {
 
         const products = await this.getProducts()
 
         if(!title || !description || !price || !thumbnail || !code || !stock) {
-            console.log(`Todos los campos son obligatorios, por favor revisa tu entrada.`)
+            console.log("Los datos ingresados son incorrectos")
             return
         }
 
@@ -47,19 +40,19 @@ constructor(path){
             stock
         };
         
-        const foundCode = products.find(prod => prod.code === producto.code)
+        const checkCode = products.find(prod => prod.code === producto.code)
 
-        if(!foundCode){
+        if(!checkCode){
             
             if (products.length === 0){
                 producto.id = 1
-            } else{
+            } else {
                 producto.id = products[products.length - 1].id + 1
             }
             products.push(producto)
             await fs.promises.writeFile(this.path, JSON.stringify(products, null, '\t'))
         } else{
-            console.log(`El código de producto ${producto.code} coincide con uno existente, coloque otro por favor.`)
+            console.log("El codigo ingresado ya existe")
         }
 
         } catch (error) {
@@ -73,13 +66,13 @@ constructor(path){
         try {
             const products = await this.getProducts()
 
-            const found = products.find( prodId => prodId.id === productId)
+            const checkId = products.find( prodId => prodId.id === productId)
             
-            if(!found){
-                console.log(`Not Found`)
+            if(!checkId){
+                console.log("Not found")
             } else {
-                console.log(`El producto elegido es -${found.title}-`)
-                return found
+                console.log(`El producto elegido es -${checkId.title}-`)
+                return checkId
             }
         } catch (error) {
             console.log(error)
@@ -109,9 +102,9 @@ constructor(path){
         try {
             let products = await this.getProducts()
             
-            const found = products.find((prod) => prod.id === id)
-            const index = products.indexOf(found)
-            if (found) {
+            const checkId = products.find((prod) => prod.id === id)
+            const index = products.indexOf(checkId)
+            if (checkId) {
             products.splice(index, 1)
             }else{
                 console.log(`El producto no existe`)
