@@ -1,14 +1,13 @@
 import express from 'express';
-import productsRouter from './routes/products.router.js';
-import cartsRouter from './routes/carts.router.js';
+import productRouter from './routes/product.router.js';
+import cartRouter from './routes/cart.router.js';
 
 const app = express();
 
-//Parametros de config
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({extended: true}));
 
-app.use('/api/products', productsRouter);
-app.use('/api/carts', cartsRouter);
+app.use('/api/products', productRouter);
+app.use('/api/carts', cartRouter);
 
-app.listen(8080, () => console.log('Server running on port 8080'));
+app.listen(8080, () => console.log('Server runing in port 8080'));
